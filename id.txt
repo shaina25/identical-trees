@@ -1,0 +1,19 @@
+
+class Node:
+    def __init__(self, val):
+        self.right = None
+        self.data = val
+        self.left = None
+
+   def isIdentical(node1,node2):
+        if(not node1 and not node2):
+            return True
+        if(not node1 or not node2):
+            return False
+        if(node1.data == node2.data):
+            return (isIdentical(node1.left,node2.left) and isIdentical(node1.right,node2.right))
+        else:
+        
+            return False
+    
+"# identical-trees" 
